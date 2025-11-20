@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Accesible - Proyecto 7</title>
+  <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+  <main class="contenedor-formulario">
+    <form action="" method="get" aria-label="Formulario de actualización de perfil">
+      <h1 class="sr-only">Formulario de actualización de perfil</h1>
+
+      <!-- Campo nombre -->
+      <label for="nombreCompleto">Nombre completo</label>
+      <input
+        type="text"
+        id="nombreCompleto"
+        name="nombreCompleto"
+        placeholder="¿Cómo deberíamos llamarte?"
+        aria-required="true"
+        required
+      >
+
+      <!-- Campo correo -->
+      <label for="correo">Correo electrónico</label>
+      <input
+        type="email"
+        id="correo"
+        name="correo"
+        class="error-input"
+        value="john@doe.com"
+        aria-invalid="true"
+        aria-describedby="errorCorreo"
+        required
+      >
+      <span class="mensaje-error" id="errorCorreo">El correo ya está en uso</span>
+
+      <!-- Campo contraseña -->
+      <label for="contraseña">Contraseña</label>
+      <div class="campo-contraseña">
+        <input
+          type="password"
+          id="contraseña"
+          name="contraseña"
+          placeholder="********"
+          aria-required="true"
+          required
+        >
+        <button type="button" class="btn-ocultar" aria-label="Mostrar u ocultar contraseña">👁️</button>
+      </div>
+
+      <!-- Campo confirmar -->
+      <label for="confirmar">Confirmar contraseña</label>
+      <div class="campo-contraseña">
+        <input
+          type="password"
+          id="confirmar"
+          name="confirmar"
+          placeholder="********"
+          aria-required="true"
+          required
+        >
+        <button type="button" class="btn-ocultar" aria-label="Mostrar u ocultar confirmación">👁️</button>
+      </div>
+
+      <button type="submit" class="btn-actualizar">Actualizar perfil</button>
+    </form>
+
+    <!-- Lado derecho: progreso -->
+    <aside class="seccion-progreso">
+      <div class="progreso-circular">
+        <div class="circulo">
+          <span>65%</span>
+        </div>
+      </div>
+
+      <h2>Completitud del perfil</h2>
+
+      <ul class="lista-tareas">
+        <li class="completado">Crear cuenta</li>
+        <li class="completado">Actualizar progreso</li>
+        <li class="completado">Configurar perfil público</li>
+        <li>Completar tu primer proyecto</li>
+        <li>Invitar a tus amigos</li>
+      </ul>
+    </aside>
+  </main>
+</body>
+</html>
